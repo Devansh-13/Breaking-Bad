@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  color: #fff;
+  background: #000 url("bg.97f9e7e8.jpg") center / cover no-repeat;
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.btn {
+  color: #fff;
+  text-align: center;
+  background-color: #3fb573;
+  border: 0;
+  margin: 10px 0;
+  padding: 10px 15px;
+  font-size: 1em;
+  display: inline-block;
+}
+
+header {
+  height: 200px;
+}
+
+header img {
+  width: 200px;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.search {
+  height: 100px;
+}
+
+input[type="text"] {
+  border: 0;
+  border-radius: 5px;
+  outline: none;
+  width: 60%;
+  margin: auto;
+  padding: 10px;
+  font-size: 20px;
+  display: block;
+}
+
+.cards {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  display: grid;
+}
+
+.card {
+  cursor: pointer;
+  perspective: 1000px;
+  background-color: #0000;
+  height: 300px;
+}
+
+.card h1 {
+  border-bottom: 1px solid #fff;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  font-size: 25px;
+}
+
+.card img {
+  object-fit: cover;
+  width: 100%;
+  height: 300px;
+}
+
+.card-inner {
+  transform-style: preserve-3d;
+  width: 100%;
+  height: 100%;
+  transition: transform .8s;
+  position: relative;
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.card-back {
+  color: #fff;
+  background-color: #333;
+  padding: 20px;
+  transform: rotateY(180deg);
+}
+
+.card li {
+  padding-bottom: 10px;
+  list-style: none;
+}
+
+@media (width <= 800px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width <= 500px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .card img {
+    object-fit: contain;
+    width: 100%;
+    height: 300px;
+  }
+}
+/*# sourceMappingURL=index.db9ed22c.css.map */
